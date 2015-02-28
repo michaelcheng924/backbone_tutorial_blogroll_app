@@ -1,6 +1,5 @@
 var express = require('express');
 var bodyParser = require('body-parser');
-var _ = require('underscore');
 var mongoose = require('mongoose');
 
 mongoose.connect('mongodb://localhost/blogroll');
@@ -17,6 +16,14 @@ mongoose.model('Blog', BlogSchema);
 
 var Blog = mongoose.model('Blog');
 
+/*var blog = new Blog({
+	author: 'Michael',
+	title: 'Michael\'s Blog',
+	url: 'http://michaelsblog.com'
+});
+
+blog.save();*/
+
 var app = express();
 
 app.use(bodyParser.json());
@@ -26,7 +33,7 @@ app.use(express.static(__dirname + '/public'));
 
 app.get('/api/blogs', function(req, res) {
 	Blog.find(function(err, docs) {
-		_.each(docs, function(item) {
+		docs.forEach(function(item) {
 			console.log("Received a GET request for _id: " + item._id);
 		})
 		res.send(docs);
