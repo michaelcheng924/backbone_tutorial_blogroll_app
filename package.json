@@ -1,0 +1,26 @@
+{
+  "name": "backbone_tutorial_blogroll_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "scripts.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/michaelcheng429/backbone_tutorial_blogroll_app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michaelcheng429/backbone_tutorial_blogroll_app/issues"
+  },
+  "homepage": "https://github.com/michaelcheng429/backbone_tutorial_blogroll_app",
+  "dependencies": {
+    "e": "0.0.4",
+    "express": "^4.12.0",
+    "mongoose": "^3.8.24",
+    "underscore": "^1.8.2"
+  }
+}
